@@ -27,21 +27,21 @@ Este documento rastreia o desenvolvimento de um sistema de estacionamento inteli
 
 **Objetivo:** Criar estrutura base de pastas, Git e organização
 
-**Status:** ⏳ Não iniciada
+**Status:** ✅ COMPLETA
 
 **Checklist:**
-- [ ] Criar pasta raiz do projeto
-- [ ] Inicializar Git + .gitignore
-- [ ] Criar estrutura de diretórios (backend / frontend / camera-service)
-- [ ] Criar projeto Spring Boot no IntelliJ (Maven)
-- [ ] Criar arquivo README.md inicial
-- [ ] Primeiro commit
+- [x] Criar pasta raiz do projeto
+- [x] Inicializar Git + .gitignore
+- [x] Criar estrutura de diretórios (backend / frontend / camera-service)
+- [x] Criar projeto Spring Boot no IntelliJ (Maven)
+- [x] Criar arquivo README.md inicial
+- [x] Primeiro commit
 
 **Notas:**
 - 
 
 **Data de Início:** —  
-**Data de Conclusão:** —  
+**Data de Conclusão:** 02/09/2026  
 
 ---
 
@@ -49,22 +49,22 @@ Este documento rastreia o desenvolvimento de um sistema de estacionamento inteli
 
 **Objetivo:** Configurar projeto Spring com dependências, estrutura MVC e global error handler
 
-**Status:** ⏳ Não iniciada
+**Status:** ✅ COMPLETA
 
 **Checklist:**
-- [ ] Adicionar dependências (Spring Web, JPA, PostgreSQL, Lombok, Spring Security, etc.)
-- [ ] Criar estrutura de pastas (controllers, services, repositories, models, config, etc.)
-- [ ] Configurar application.properties (banco de dados, porta, perfis)
-- [ ] Criar classe principal da aplicação (Application.java)
-- [ ] Implementar Global Exception Handler
-- [ ] Configurar Logger/SLF4J
-- [ ] Testar servidor subindo
+- [x] Adicionar dependências (Spring Web, JPA, PostgreSQL, Lombok, Spring Security, etc.)
+- [x] Criar estrutura de pastas (controllers, services, repositories, models, config, etc.)
+- [x] Configurar application.properties (banco de dados, porta, perfis)
+- [x] Criar classe principal da aplicação (Application.java)
+- [x] Implementar Global Exception Handler
+- [x] Configurar Logger/SLF4J
+- [x] Testar servidor subindo
 
 **Notas:**
 - 
 
 **Data de Início:** —  
-**Data de Conclusão:** —  
+**Data de Conclusão:** 02/09/2026  
 
 ---
 
@@ -72,24 +72,20 @@ Este documento rastreia o desenvolvimento de um sistema de estacionamento inteli
 
 **Objetivo:** Configurar Postgres e criar models + migrations
 
-**Status:** ⏳ Não iniciada
+**Status:** ✅ COMPLETA!
 
 **Checklist:**
-- [ ] Instalar/Configurar PostgreSQL localmente
-- [ ] Criar banco de dados
-- [ ] Criar Model: Estacionamento
-- [ ] Criar Model: Evento
-- [ ] Criar Model: Usuario (Admin)
-- [ ] Criar Repositories (JpaRepository)
-- [ ] Executar primeira migration (Flyway ou Hibernate validate)
-- [ ] Seed inicial (dados de teste)
-- [ ] Testar conexão
+- [x] PASSO 1: Model Estacionamento criado
+- [x] PASSO 2: Model Evento criado
+- [x] PASSO 3: Repository Estacionamento criado
+- [x] PASSO 4: Repository Evento criado
+- [x] PASSO 5: Servidor rodou e criou as tabelas
 
 **Notas:**
-- 
+- Etapa 3 FINALIZADA! 🚀
 
 **Data de Início:** —  
-**Data de Conclusão:** —  
+**Data de Conclusão:** 02/09/2026  
 
 ---
 
@@ -97,21 +93,23 @@ Este documento rastreia o desenvolvimento de um sistema de estacionamento inteli
 
 **Objetivo:** Implementar login de admin + JWT + proteção de rotas
 
-**Status:** ⏳ Não iniciada
+**Status:** ✅ COMPLETA
 
 **Checklist:**
-- [ ] Criar Controller de Autenticação (login)
-- [ ] Implementar JWT Provider (geração e validação)
-- [ ] Configurar Spring Security
-- [ ] Criar Middleware de autenticação
-- [ ] Proteger rotas administrativas
-- [ ] Testar login + token
+- [x] Criar Controller de Autenticação (login)
+- [x] Implementar JWT Provider (geração e validação)
+- [x] Configurar Spring Security
+- [x] Criar Middleware de autenticação
+- [x] Proteger rotas administrativas
+- [x] Testar login + token
 
 **Notas:**
-- 
+- Login disponível em `POST /api/auth/login` com as credenciais de desenvolvimento `admin` / `admin123`.
+- JWT assinado com HS512; filtro executado antes da autorização e rotas não públicas exigem autenticação.
+- Login validado por curl com resposta HTTP 200 e token JWT.
 
 **Data de Início:** —  
-**Data de Conclusão:** —  
+**Data de Conclusão:** 02/09/2026  
 
 ---
 
@@ -234,17 +232,17 @@ Este documento rastreia o desenvolvimento de um sistema de estacionamento inteli
 ## 📊 Progresso Geral
 
 ```
-Etapa 1: [                    ] 0%
-Etapa 2: [                    ] 0%
-Etapa 3: [                    ] 0%
-Etapa 4: [                    ] 0%
-Etapa 5: [                    ] 0%
+Etapa 1: [████████████████████] ✅ COMPLETA
+Etapa 2: [████████████████████] ✅ COMPLETA
+Etapa 3: [████████████████████] ✅ COMPLETA
+Etapa 4: [████████████████████] ✅ COMPLETA
+Etapa 5: [░░░░░░░░░░░░░░░░░░░░] 0%
 Etapa 6: [                    ] 0%
 Etapa 7: [                    ] 0%
 Etapa 8: [                    ] 0%
 Etapa 9: [                    ] 0%
-─────────────────────────────────
-Total:   [                    ] 0%
+──────────────────────────────────
+Total:   [██████████████████    ] 44%
 ```
 
 ---
@@ -285,4 +283,3 @@ Total:   [                    ] 0%
 ---
 
 **Próximo passo:** Etapa 1 — Setup do Projeto (Monorepo)
-
