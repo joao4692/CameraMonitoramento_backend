@@ -1,6 +1,6 @@
 # 🚗 Sistema de Estacionamento Inteligente — Plano de Desenvolvimento
 
-**Responsável:** JU (Joana Psicólogo)  
+**Responsável:** Joao Carlos 
 **Stack:** Java + Spring Boot + PostgreSQL + Angular + Python (OpenCV)  
 **Objetivo:** Aplicação fullstack para gerenciar vagas de estacionamento em tempo real  
 **Data de Início:** 02/09/2026  
