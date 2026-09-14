@@ -1,0 +1,30 @@
+# Copie este arquivo para application.properties. O arquivo real é local e ignorado pelo Git.
+spring.application.name=CameraMonitoramento
+server.port=8080
+server.servlet.context-path=/api
+
+# PostgreSQL: defina DB_PASSWORD no ambiente local; não versionar senhas reais.
+spring.datasource.url=${DB_URL:jdbc:postgresql://localhost:5433/camera_monitoramento}
+spring.datasource.username=${DB_USERNAME:postgres}
+spring.datasource.password=${DB_PASSWORD}
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+
+# RabbitMQ (configure quando o serviço estiver em uso)
+spring.rabbitmq.host=${RABBITMQ_HOST:localhost}
+spring.rabbitmq.port=${RABBITMQ_PORT:5672}
+spring.rabbitmq.username=${RABBITMQ_USERNAME:guest}
+spring.rabbitmq.password=${RABBITMQ_PASSWORD}
+
+# Gere uma chave Base64 forte para cada ambiente; nunca reutilize a de produção.
+app.jwt.secret=${JWT_SECRET}
+app.jwt.expiration=${JWT_EXPIRATION:86400000}
+
+# Credenciais locais de desenvolvimento. Em produção, use usuários no banco e senhas com hash.
+app.auth.admin-username=${ADMIN_USERNAME}
+app.auth.admin-password=${ADMIN_PASSWORD}
+
+logging.level.root=INFO
+logging.level.com.example.cameramonitoramento=DEBUG

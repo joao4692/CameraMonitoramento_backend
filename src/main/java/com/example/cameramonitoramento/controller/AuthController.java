@@ -1,6 +1,7 @@
 package com.example.cameramonitoramento.controller;
 
 import com.example.cameramonitoramento.security.JwtProvider;
+import org.springframework.beans.factory.annotation.Value;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,12 @@ public class AuthController {
     @Autowired
     private JwtProvider jwtProvider;
 
+    @Value("${app.auth.admin-username}")
+    private String adminUsername;
+
+    @Value("${app.auth.admin-password}")
+    private String adminPassword;
+
     /**
      * Endpoint de login
      * POST /api/auth/login
@@ -30,7 +37,7 @@ public class AuthController {
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
         try {
             // Validação simples (em produção, seria validado contra banco)
-            if ("admin".equals(loginRequest.getUsername()) && "admin123".equals(loginRequest.getPassword())) {
+            if (adminUsername.equals(loginRequest.getUsername()) && adminPassword.equals(loginRequest.getPassword())) {
 
                 // Gera o token JWT
                 String token = jwtProvider.generateToken(loginRequest.getUsername());

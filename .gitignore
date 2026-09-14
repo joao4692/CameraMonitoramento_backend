@@ -31,3 +31,11 @@ buildNumber.properties
 # Build
 build/
 dist/
+
+
+# Local configuration / secrets
+src/main/resources/application.properties
+src/main/resources/application-local.properties
+.env
+.env.*
+!.env.example
